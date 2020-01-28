@@ -10,6 +10,7 @@
 		A29251C0F6531BE15EE709CA /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925EDF2418069EDA8EC73E /* Size.swift */; };
 		A2925214378870626DC000C0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925C70B327215F103A46A8 /* HomePresenter.swift */; };
 		A2925302805DC381F9DDEB68 /* BindObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925FAFDB2549DA55394F1D /* BindObjects.swift */; };
+		A29253E2DBEA5D14A8B5AE9D /* Trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A292566F0C412B22AA089C7F /* Trash.swift */; };
 		A292546AAF29E49A29BCE75E /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925F62217D98F487944D20 /* IAPHelper.swift */; };
 		A29254A5F8B44BB0B882FF68 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29256E5059CAE70A330CEC6 /* UIColor+Hex.swift */; };
 		A29254D7FBBF44F215DD06A7 /* SKProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925DEAAE4D3DF33F14A4C9 /* SKProductCell.swift */; };
@@ -78,6 +79,7 @@
 		A292509E4E787B0DA9F7190D /* HomeRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRoute.swift; sourceTree = "<group>"; };
 		A2925113CBE83E5218A541B0 /* HomeContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
 		A29255E3CA7E2143A24ABA05 /* SKProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductViewModel.swift; sourceTree = "<group>"; };
+		A292566F0C412B22AA089C7F /* Trash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trash.swift; sourceTree = "<group>"; };
 		A29256CE203C7A287AF694A9 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		A29256E5059CAE70A330CEC6 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		A29258F185BD45AACCAAF0E1 /* ListHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListHelper.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				A2925F54A1293BD35889B086 /* SKProductSectionController.swift */,
 				A29255E3CA7E2143A24ABA05 /* SKProductViewModel.swift */,
 				A2925DEAAE4D3DF33F14A4C9 /* SKProductCell.swift */,
+				A292566F0C412B22AA089C7F /* Trash.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				A2925678FEA01BC5090B9D3F /* EmptyView.swift in Sources */,
 				A2925302805DC381F9DDEB68 /* BindObjects.swift in Sources */,
 				A2925E36DEE2CF45B8D3B595 /* RootRoute.swift in Sources */,
+				A29253E2DBEA5D14A8B5AE9D /* Trash.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

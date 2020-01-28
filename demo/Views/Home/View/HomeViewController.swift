@@ -20,30 +20,14 @@ class HomeViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.StylesheetColor.White
+        setupUI()
         helper.viewDidLoad()
         presenter?.viewDidLoad()
     }
     
-//    func setupUI() {
-//        let str = "Buy"
-//                .styleAll(Style.font(Stylesheet.Font.NormalFHeadline).foregroundColor(UIColor.StylesheetColor.Black))
-//                .attributedString
-//
-//        self.view.backgroundColor = UIColor.StylesheetColor.White
-//        let iap = UIButton(type: .system)
-//        iap.setTitleColor(.black, for: .normal)
-//        iap.setAttributedTitle(str, for: .normal)
-//        self.view.addSubview(iap)
-//        iap.snp.makeConstraints { maker in
-//            maker.centerX.equalToSuperview()
-//            maker.centerY.equalToSuperview()
-//        }
-//        iap.addTarget(self, action: #selector(onIAPClick), for: .touchUpInside)
-//    }
-//    @objc func onIAPClick(_ sender: UIButton) {
-//        print(Stylesheet.Font.NormalF3)
-//    }
+    func setupUI() {
+        self.view.backgroundColor = UIColor.StylesheetColor.White
+    }
 }
 
 extension HomeViewController : HomeViewDelegate {

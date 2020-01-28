@@ -1,6 +1,6 @@
 # demo
 
-The iOS client for the [`graphql-starter-kit`](https://github.com/pepeunlimited/graphql-starter-kit)
+The iOS client for the [`grahpql-starter-kit`](https://github.com/pepeunlimited/grahpql-starter-kit)
 
 ## Misc
 

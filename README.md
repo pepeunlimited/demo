@@ -4,4 +4,4 @@ The iOS client for the [`graphql-starter-kit`](https://github.com/pepeunlimited/
 
 ## Misc
 
-![without-main-storyboard](/without-main-storyboard.png.png)
+![without-main-storyboard](/without-main-storyboard.png)

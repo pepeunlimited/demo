@@ -5,21 +5,24 @@
 
 import Foundation
 import IGListKit
+import StoreKit
 
 protocol HomeViewDelegate: class {
 
     func showText(text: String)
 
-    func refresh()
+    func refresh(_ state: NetworkState)
 }
 
 protocol HomeInteractorInput: class {
-    func load()
+
+    // product identifiers which are set to Apple's Store
+    func loadIAPProducts(_ productIDs: Set<String>)
 }
 
 protocol HomeInteractorOutput: class {
 
-    func loaded()
+    func loadedIAPProducts(_ products: [SKProduct])
 }
 
 protocol HomePresenterDelegate: BindObjects {

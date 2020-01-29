@@ -7,13 +7,17 @@ import Foundation
 import IGListKit
 import UIKit
 
-final class SKProductViewModel: ListDiffable {
+final class SKProductViewModel {
 
     let price: NSDecimalNumber
 
     init(price: NSDecimalNumber) {
         self.price = price
     }
+
+}
+
+extension SKProductViewModel: ListDiffable {
 
     func diffIdentifier() -> NSObjectProtocol {
         return "SKProductViewModel" as NSObjectProtocol
@@ -28,7 +32,6 @@ final class SKProductViewModel: ListDiffable {
 extension SKProductViewModel: Heightable {
 
     func height(width: CGFloat) -> CGFloat {
-        return Size.calculateTextHeight(width: width, font: Stylesheet.Font.NormalF4, insets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), text: price.stringValue)
+        return Size.calculateTextHeight(width: width, font: SKProductCell.font, insets: SKProductCell.insets, text: price.stringValue)
     }
-
 }

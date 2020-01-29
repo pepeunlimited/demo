@@ -6,22 +6,18 @@
 import Foundation
 import StoreKit
 import IGListKit
+import PromiseKit
+import PMKStoreKit
 
 // https://www.raywenderlich.com/5456-in-app-purchase-tutorial-getting-started
+
 class IAPHelper: NSObject {
 
-    private let productIdentifiers: Set<String>
-
-    public init(productIds: Set<String>) {
-        self.productIdentifiers = productIds
-        super.init()
-    }
-}
-
-extension IAPHelper {
-
-    func products() {
-
+    func products(productIDs: Set<String>) -> Promise<SKProductsResponse> {
+        let req = SKProductsRequest(productIdentifiers: productIDs)
+        return firstly {
+            req.start(.promise)
+        }
     }
 
     func buy(_ product: SKProduct) {}
@@ -37,22 +33,25 @@ extension IAPHelper {
     func restore() {}
 }
 
-extension IAPHelper: SKProductsRequestDelegate {
-
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-
-    }
-
-}
-
 extension SKProduct: ListDiffable {
 
     public func diffIdentifier() -> NSObjectProtocol {
-        return productIdentifier as NSObjectProtocol
+        return self.productIdentifier as NSObjectProtocol
     }
 
     public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        guard let object = object as? SKProduct else  { return false }
-        return productIdentifier == object.productIdentifier
+        return true
+    }
+}
+
+protocol SKProductPurchase {
+
+    func isPurchased() -> Bool
+}
+
+extension SKProduct: SKProductPurchase  {
+
+    func isPurchased() -> Bool {
+        return false
     }
 }

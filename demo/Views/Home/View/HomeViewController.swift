@@ -36,18 +36,27 @@ extension HomeViewController : HomeViewDelegate {
 
     }
 
-    func refresh() {
+    func refresh(_ state: NetworkState) {
+        switch state {
+        case .loading, .loadingNext:
+            print("loading")
+            self.helper.loadingView.isHidden = false
+        default:
+            print("done")
+            self.helper.loadingView.isHidden = true
+        }
         self.helper.adapter.performUpdates(animated: true, completion: nil)
+
     }
 }
 
 extension HomeViewController: ListAdapterDataSource {
 
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        guard let p = presenter else {
+        guard let presenter = self.presenter else {
             fatalError("missing presenter!")
         }
-        return p.objects(for: listAdapter)
+        return presenter.objects(for: listAdapter)
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
@@ -58,10 +67,10 @@ extension HomeViewController: ListAdapterDataSource {
     }
 
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        guard let p = presenter else {
+        guard let presenter = self.presenter else {
             fatalError("missing presenter!")
         }
-        switch p.state() {
+        switch presenter.state() {
         case .idle:
             let emptyView = EmptyView()
             emptyView.text = "Oops, No Product Found!"

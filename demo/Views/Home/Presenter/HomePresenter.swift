@@ -18,13 +18,19 @@ class HomePresenter : NSObject {
     var route: HomeRoute?
 
     var networkState: NetworkState = .initial
+
+    
+    var objects: [ListDiffable] = []
+    
 }
 
 extension HomePresenter: HomePresenterDelegate {
 
     func fetchIAPProducts() {
-        print("fetchIAPProducts")
-        self.interactor?.load()
+        let productIds: Set<String> = ["something"]
+        self.networkState = .loading
+        self.view?.refresh(networkState)
+        self.interactor?.loadIAPProducts(productIds)
     }
 
     func state() -> NetworkState {
@@ -32,7 +38,7 @@ extension HomePresenter: HomePresenterDelegate {
     }
 
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return []
+        return objects
     }
 
     func iap() {
@@ -40,14 +46,17 @@ extension HomePresenter: HomePresenterDelegate {
     }
 
     func viewDidLoad() {
-        self.interactor?.load()
+        let productIds: Set<String> = ["something"]
+        self.networkState = .loading
+        self.view?.refresh(networkState)
+        self.interactor?.loadIAPProducts(productIds)
     }
 }
 
 extension HomePresenter: HomeInteractorOutput {
-    func loaded() {
+    func loadedIAPProducts(_ products: [SKProduct]) {
+        objects = [SKProduct()]
         self.networkState = .idle
-        self.view?.showText(text: "loaded")
-        self.view?.refresh()
+        self.view?.refresh(networkState)
     }
 }

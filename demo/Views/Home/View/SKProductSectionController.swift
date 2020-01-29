@@ -19,7 +19,9 @@ class SKProductViewSectionController: ListBindingSectionController<ListDiffable>
 
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>, viewModelsFor object: Any) -> [ListDiffable] {
         guard let product = object as? SKProduct else { fatalError("not supported object=\(object)") }
-        let viewModels: [ListDiffable] = [SKProductViewModel(price: product.price)]
+        let price = 0.64 as NSDecimalNumber
+        let viewModels: [ListDiffable] = [SKProductViewModel(price: price),
+                                          SKProductActionsViewModel(isPurchased: product.isPurchased())]
         return viewModels
     }
 
@@ -27,6 +29,7 @@ class SKProductViewSectionController: ListBindingSectionController<ListDiffable>
         let cellClass: AnyClass
         switch viewModel {
         case is SKProductViewModel: cellClass = SKProductCell.self
+        case is SKProductActionsViewModel: cellClass = SKProductActionsCell.self
         default: fatalError("not supported viewModel \(viewModel)")
         }
         guard let cell = sectionController.collectionContext?.dequeueReusableCell(of: cellClass, for: sectionController, at: index) as? UICollectionViewCell & ListBindable else { fatalError("cell is not bindable") }
@@ -38,7 +41,8 @@ class SKProductViewSectionController: ListBindingSectionController<ListDiffable>
         let height: CGFloat
         switch viewModel {
         case let viewModel as SKProductViewModel: height = viewModel.height(width: ctx.width)               // dynamic
-//        case is SKProductViewModel: height = Stylesheet.Height.xs                                           // fixed
+//        case is SKProductActionsViewModel: height = Stylesheet.Height.xl                                    // fixed
+        case is SKProductActionsViewModel: height = SKProductActionsCell.font.pointSize
         default: height = Stylesheet.Height.xs                                                              // fixed
         }
         return CGSize(width: ctx.width, height: height)

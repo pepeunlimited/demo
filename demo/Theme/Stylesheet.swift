@@ -26,12 +26,12 @@ struct Stylesheet {
         static let s: CGFloat   = 10
         static let m: CGFloat   = 10
         static let l: CGFloat   = 10
-        static let xl: CGFloat  = 10
+        static let xl: CGFloat  = 100
     }
 
     /* factors */
     public struct TypeScale {
-        static let fHeadline: CGFloat          = 28
+        static let fHeadline: CGFloat          = 35
         static let fSubheadline: CGFloat       = 21
         static let f1: CGFloat                 = 15
         static let f2: CGFloat                 = 11

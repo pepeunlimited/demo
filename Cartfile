@@ -1,3 +1,5 @@
 github "SnapKit/SnapKit" ~> 5.0.0
 github "Instagram/IGListKit" "a9ecf5d47668cf7c7617e9bfcc25248878501417"
 github "psharanda/Atributika"
+github "mxcl/PromiseKit" ~> 6.8
+github "PromiseKit/StoreKit" ~> 3.0

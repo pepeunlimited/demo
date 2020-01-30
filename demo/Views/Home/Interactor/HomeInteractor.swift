@@ -16,11 +16,11 @@ class HomeInteractor {
 
 extension HomeInteractor : HomeInteractorInput {
 
-    func loadIAPProducts(_ productIDs: Set<String>) {
+    func loadSKProducts(_ productIDs: Set<String>) {
         firstly {
             helper.products(productIDs: productIDs)
         }.done {
-            self.output?.loadedIAPProducts($0.products)
+            self.output?.loadedSKProducts($0.products)
         }.catch {
             print($0)
         }

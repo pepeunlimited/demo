@@ -32,21 +32,14 @@ class HomeViewController : UIViewController {
 
 extension HomeViewController : HomeViewDelegate {
 
-    func showText(text: String) {
-
-    }
-
     func refresh(_ state: NetworkState) {
         switch state {
         case .loading, .loadingNext:
-            print("loading")
             self.helper.loadingView.isHidden = false
         default:
-            print("done")
             self.helper.loadingView.isHidden = true
         }
         self.helper.adapter.performUpdates(animated: true, completion: nil)
-
     }
 }
 
@@ -86,7 +79,7 @@ extension HomeViewController: ListAdapterDataSource {
 extension HomeViewController: EmptyViewDelegate {
 
     func didTapRetry(view: EmptyView) {
-        self.presenter?.fetchIAPProducts()
+        self.presenter?.skproducts()
     }
 
 }

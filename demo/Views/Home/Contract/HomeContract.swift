@@ -9,24 +9,22 @@ import StoreKit
 
 protocol HomeViewDelegate: class {
 
-    func showText(text: String)
-
     func refresh(_ state: NetworkState)
 }
 
 protocol HomeInteractorInput: class {
 
     // product identifiers which are set to Apple's Store
-    func loadIAPProducts(_ productIDs: Set<String>)
+    func loadSKProducts(_ productIDs: Set<String>)
 }
 
 protocol HomeInteractorOutput: class {
 
-    func loadedIAPProducts(_ products: [SKProduct])
+    func loadedSKProducts(_ products: [SKProduct])
 }
 
 protocol HomePresenterDelegate: BindObjects {
     func viewDidLoad()
-    func iap()
-    func fetchIAPProducts()
+    func skproducts(_ productIds: Set<String>)
+    func skproducts()
 }

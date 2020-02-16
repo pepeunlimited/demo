@@ -11,6 +11,7 @@
 		A29251C0F6531BE15EE709CA /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925EDF2418069EDA8EC73E /* Size.swift */; };
 		A2925214378870626DC000C0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925C70B327215F103A46A8 /* HomePresenter.swift */; };
 		A29252390831EDC2B5B408F0 /* SKProductActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925CC51B32B210F1B96124 /* SKProductActionsCell.swift */; };
+		A29252744CDB23939EB02E7B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925FDCB5F11B0B07DEB2C2 /* Request.swift */; };
 		A2925302805DC381F9DDEB68 /* BindObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925FAFDB2549DA55394F1D /* BindObjects.swift */; };
 		A2925418DB9702DFB121B82A /* ListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925FEF982E77DC0053E822 /* ListHelper.swift */; };
 		A292546AAF29E49A29BCE75E /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925F62217D98F487944D20 /* IAPHelper.swift */; };
@@ -19,8 +20,11 @@
 		A29255182EB7858912D275D3 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925B83F566F438F19ACEB2 /* Stylesheet.swift */; };
 		A29255C28315A0A858B46795 /* SKProductActionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29254543706198EEC784338 /* SKProductActionsViewModel.swift */; };
 		A2925678FEA01BC5090B9D3F /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29256CE203C7A287AF694A9 /* EmptyView.swift */; };
+		A292568B10C52C1A600D34EF /* DemoAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925727628A3D128EDF8892 /* DemoAuthentication.swift */; };
 		A2925774C37131538FB2329D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A292505BF28D1A27F66F4A9A /* HomeViewController.swift */; };
+		A2925B79383E65147499F30D /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925B24D2677D8758953157 /* Authentication.swift */; };
 		A2925B9178EC991D1B32737D /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925113CBE83E5218A541B0 /* HomeContract.swift */; };
+		A2925BE953B8D5E0EB845460 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925F764730285EDC9C0364 /* Auth.swift */; };
 		A2925C0D9848BB023381CE41 /* SKProductSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925F54A1293BD35889B086 /* SKProductSectionController.swift */; };
 		A2925C65A7630E16D04FE3FA /* HomeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A292509E4E787B0DA9F7190D /* HomeRoute.swift */; };
 		A2925DD8195DD674506C2665 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925A01B6DA8E683FE9CCF2 /* HomeInteractor.swift */; };
@@ -90,8 +94,10 @@
 		A29255E3CA7E2143A24ABA05 /* SKProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductViewModel.swift; sourceTree = "<group>"; };
 		A29256CE203C7A287AF694A9 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		A29256E5059CAE70A330CEC6 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		A2925727628A3D128EDF8892 /* DemoAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAuthentication.swift; sourceTree = "<group>"; };
 		A2925A01B6DA8E683FE9CCF2 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		A2925A48DB66DD80F5346D88 /* RootRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRoute.swift; sourceTree = "<group>"; };
+		A2925B24D2677D8758953157 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		A2925B83F566F438F19ACEB2 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		A2925C70B327215F103A46A8 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		A2925CC51B32B210F1B96124 /* SKProductActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductActionsCell.swift; sourceTree = "<group>"; };
@@ -100,7 +106,9 @@
 		A2925EDF2418069EDA8EC73E /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		A2925F54A1293BD35889B086 /* SKProductSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductSectionController.swift; sourceTree = "<group>"; };
 		A2925F62217D98F487944D20 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		A2925F764730285EDC9C0364 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		A2925FAFDB2549DA55394F1D /* BindObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindObjects.swift; sourceTree = "<group>"; };
+		A2925FDCB5F11B0B07DEB2C2 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		A2925FEF982E77DC0053E822 /* ListHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListHelper.swift; sourceTree = "<group>"; };
 		F92929E523E221B5004476E4 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F92929E823E221B9004476E4 /* PMKStoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKStoreKit.framework; path = Carthage/Build/iOS/PMKStoreKit.framework; sourceTree = "<group>"; };
@@ -165,6 +173,17 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		A292519D63868E3939A33974 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A2925B24D2677D8758953157 /* Authentication.swift */,
+				A2925727628A3D128EDF8892 /* DemoAuthentication.swift */,
+				A2925F764730285EDC9C0364 /* Auth.swift */,
+				A2925CFF70FA948EE0A5BDAC /* Network */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		A292526F98DE714291CF31DD /* Route */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +198,7 @@
 				A2925FAFDB2549DA55394F1D /* BindObjects.swift */,
 				A2925A48DB66DD80F5346D88 /* RootRoute.swift */,
 				A2925FEF982E77DC0053E822 /* ListHelper.swift */,
+				A292519D63868E3939A33974 /* Authentication */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -219,6 +239,14 @@
 				A2925D62045EF09344AD0D74 /* LoadingView.swift */,
 			);
 			path = UIs;
+			sourceTree = "<group>";
+		};
+		A2925CFF70FA948EE0A5BDAC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A2925FDCB5F11B0B07DEB2C2 /* Request.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		A2925F3224337B5E4051BA44 /* Theme */ = {
@@ -503,6 +531,10 @@
 				A29255C28315A0A858B46795 /* SKProductActionsViewModel.swift in Sources */,
 				A2925418DB9702DFB121B82A /* ListHelper.swift in Sources */,
 				A29250F365D85D8A83DD02C4 /* LoadingView.swift in Sources */,
+				A2925B79383E65147499F30D /* Authentication.swift in Sources */,
+				A292568B10C52C1A600D34EF /* DemoAuthentication.swift in Sources */,
+				A2925BE953B8D5E0EB845460 /* Auth.swift in Sources */,
+				A29252744CDB23939EB02E7B /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

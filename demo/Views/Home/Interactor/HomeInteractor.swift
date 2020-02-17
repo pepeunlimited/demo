@@ -35,6 +35,7 @@ extension HomeInteractor : HomeInteractorInput {
             self.output?.loadedSKProducts($0.products)
         }.catch {
             print($0)
+            self.output?.failureSKProducts()
         }
     }
 }

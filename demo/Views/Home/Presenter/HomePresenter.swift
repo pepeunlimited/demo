@@ -50,9 +50,16 @@ extension HomePresenter: HomePresenterDelegate {
 }
 
 extension HomePresenter: HomeInteractorOutput {
+
+    func failureSKProducts() {
+        self.networkState = .failure
+        self.view?.refresh(networkState)
+    }
+
     func loadedSKProducts(_ products: [SKProduct]) {
         objects = [SKProduct()]
         self.networkState = .idle
         self.view?.refresh(networkState)
     }
+    
 }

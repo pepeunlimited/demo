@@ -19,4 +19,5 @@ enum NetworkState {
     case loading
     case loadingNext
     case idle
+    case failure
 }

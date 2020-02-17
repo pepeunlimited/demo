@@ -70,6 +70,12 @@ extension HomeViewController: ListAdapterDataSource {
             emptyView.retry.isHidden = false
             emptyView.delegate = self
             return emptyView
+        case .failure:
+            let emptyView = EmptyView()
+            emptyView.text = "Oops, Failed fetch Products!"
+            emptyView.retry.isHidden = false
+            emptyView.delegate = self
+            return emptyView
         case .initial, .loading, .loadingNext:
             return nil
         }
@@ -81,5 +87,4 @@ extension HomeViewController: EmptyViewDelegate {
     func didTapRetry(view: EmptyView) {
         self.presenter?.skproducts()
     }
-
 }

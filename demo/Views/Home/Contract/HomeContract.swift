@@ -21,6 +21,8 @@ protocol HomeInteractorInput: class {
 protocol HomeInteractorOutput: class {
 
     func loadedSKProducts(_ products: [SKProduct])
+
+    func failureSKProducts()
 }
 
 protocol HomePresenterDelegate: BindObjects {

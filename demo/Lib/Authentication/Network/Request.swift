@@ -7,15 +7,13 @@ import Foundation
 import PromiseKit
 
 // https://matteomanferdini.com/network-requests-rest-apis-ios-swift/
-public enum Result<Success, Error> {
-    /// A success, storing a `Success` value.
-    case success(Success)
 
-    /// A failure, storing a `Failure` value.
+public enum Result<Response, Error> {
+    case success(Response)
     case failure(Error)
 }
 
-struct Request {
+struct Request<T : Decodable> {
 
     let session: URLSession
     let url: URL
@@ -25,13 +23,13 @@ struct Request {
         self.url = url
     }
 
-    func start(_ callback: @escaping (Result<(Data, HTTPURLResponse), Error>) -> Void) {
+    func start(_ callback: @escaping (Result<Response<T>, Error>) -> Void) {
         let req = URLRequest(url: url)
         let task = session.dataTask(with: req) { data, response, error in
             if let error = error {
                 callback(.failure(error))
             } else if let data = data, let urlResponse = response as? HTTPURLResponse {
-                callback(.success((data, urlResponse)))
+                callback(.success(Response(data: data, response: urlResponse)))
             }
         }
         task.resume()
@@ -40,13 +38,13 @@ struct Request {
 
 // PromiseKit wrapper
 extension Request {
-    func start(_: PMKNamespacer) -> Promise<Data> {
+    func start(_: PMKNamespacer) -> Promise<Response<T>> {
         return Promise { seal in
                 start { (result) in
                     switch result {
-                    case .success(let data, let urlResponse):
+                    case .success(let resp):
                         // Handle response
-                        seal.fulfill(data)
+                        seal.fulfill(resp)
                         break
                     case .failure(let error):
                         // Handle error

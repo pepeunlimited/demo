@@ -25,9 +25,9 @@ extension HomeInteractor : HomeInteractorInput {
                     .start(.promise)
         }
         .compactMap {
-            String(decoding: $0, as: UTF8.self)
+            try $0.decode()
         }.compactMap {
-            print($0)
+            print($0.origin)
         }
         .then {
             self.helper.products(productIDs: productIDs)

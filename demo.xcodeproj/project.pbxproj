@@ -22,6 +22,8 @@
 		A2925678FEA01BC5090B9D3F /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29256CE203C7A287AF694A9 /* EmptyView.swift */; };
 		A292568B10C52C1A600D34EF /* DemoAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925727628A3D128EDF8892 /* DemoAuthentication.swift */; };
 		A2925774C37131538FB2329D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A292505BF28D1A27F66F4A9A /* HomeViewController.swift */; };
+		A2925879F03C1C5AAECFD529 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925B63E359DC7A3340DDF9 /* Response.swift */; };
+		A29259C2A16F3A5D9A41CBC5 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925E96FEE774E0419D0ABE /* Get.swift */; };
 		A2925B79383E65147499F30D /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925B24D2677D8758953157 /* Authentication.swift */; };
 		A2925B9178EC991D1B32737D /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925113CBE83E5218A541B0 /* HomeContract.swift */; };
 		A2925BE953B8D5E0EB845460 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2925F764730285EDC9C0364 /* Auth.swift */; };
@@ -98,11 +100,13 @@
 		A2925A01B6DA8E683FE9CCF2 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		A2925A48DB66DD80F5346D88 /* RootRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRoute.swift; sourceTree = "<group>"; };
 		A2925B24D2677D8758953157 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		A2925B63E359DC7A3340DDF9 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		A2925B83F566F438F19ACEB2 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		A2925C70B327215F103A46A8 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		A2925CC51B32B210F1B96124 /* SKProductActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductActionsCell.swift; sourceTree = "<group>"; };
 		A2925D62045EF09344AD0D74 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A2925DEAAE4D3DF33F14A4C9 /* SKProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductCell.swift; sourceTree = "<group>"; };
+		A2925E96FEE774E0419D0ABE /* Get.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
 		A2925EDF2418069EDA8EC73E /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		A2925F54A1293BD35889B086 /* SKProductSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductSectionController.swift; sourceTree = "<group>"; };
 		A2925F62217D98F487944D20 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				A2925727628A3D128EDF8892 /* DemoAuthentication.swift */,
 				A2925F764730285EDC9C0364 /* Auth.swift */,
 				A2925CFF70FA948EE0A5BDAC /* Network */,
+				A2925E54693A44851ED986B0 /* HTTPBin */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -245,8 +250,17 @@
 			isa = PBXGroup;
 			children = (
 				A2925FDCB5F11B0B07DEB2C2 /* Request.swift */,
+				A2925B63E359DC7A3340DDF9 /* Response.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A2925E54693A44851ED986B0 /* HTTPBin */ = {
+			isa = PBXGroup;
+			children = (
+				A2925E96FEE774E0419D0ABE /* Get.swift */,
+			);
+			path = HTTPBin;
 			sourceTree = "<group>";
 		};
 		A2925F3224337B5E4051BA44 /* Theme */ = {
@@ -535,6 +549,8 @@
 				A292568B10C52C1A600D34EF /* DemoAuthentication.swift in Sources */,
 				A2925BE953B8D5E0EB845460 /* Auth.swift in Sources */,
 				A29252744CDB23939EB02E7B /* Request.swift in Sources */,
+				A2925879F03C1C5AAECFD529 /* Response.swift in Sources */,
+				A29259C2A16F3A5D9A41CBC5 /* Get.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

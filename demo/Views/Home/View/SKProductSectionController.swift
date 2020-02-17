@@ -8,9 +8,17 @@ import UIKit
 import IGListKit
 import StoreKit
 
+
+protocol SKProductViewDelegate : class {
+
+
+}
+
 // should bind section controller per one model
 class SKProductViewSectionController: ListBindingSectionController<ListDiffable>,
                                       ListBindingSectionControllerDataSource {
+
+    weak var delegate: SKProductViewDelegate?
 
     override init() {
         super.init()

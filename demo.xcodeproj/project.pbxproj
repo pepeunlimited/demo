@@ -184,7 +184,7 @@
 				A2925727628A3D128EDF8892 /* DemoAuthentication.swift */,
 				A2925F764730285EDC9C0364 /* Auth.swift */,
 				A2925CFF70FA948EE0A5BDAC /* Network */,
-				A2925E54693A44851ED986B0 /* HTTPBin */,
+				A2925E54693A44851ED986B0 /* HttpBin */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -255,12 +255,12 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		A2925E54693A44851ED986B0 /* HTTPBin */ = {
+		A2925E54693A44851ED986B0 /* HttpBin */ = {
 			isa = PBXGroup;
 			children = (
 				A2925E96FEE774E0419D0ABE /* Get.swift */,
 			);
-			path = HTTPBin;
+			path = HttpBin;
 			sourceTree = "<group>";
 		};
 		A2925F3224337B5E4051BA44 /* Theme */ = {

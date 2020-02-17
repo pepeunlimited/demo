@@ -14,8 +14,8 @@ struct DemoAuthentication : Authentication {
         self.url = url
     }
 
-    func login(usernameOrEmail username: String, password: String) -> Request<HTTPBinGet> {
-        return Request<HTTPBinGet>(session: session, url: url)
+    func login(usernameOrEmail username: String, password: String) -> Request<HttpBingGet> {
+        return Request<HttpBingGet>(session: session, url: url)
     }
 
     func createUser(email: String, username: String?, password: String) {

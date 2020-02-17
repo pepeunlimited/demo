@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct HTTPBinGet : Decodable {
+struct HttpBingGet: Decodable {
 
     public let origin: String
 

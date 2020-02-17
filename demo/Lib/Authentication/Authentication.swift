@@ -9,7 +9,7 @@ protocol Authentication {
 
     var url: URL { get }
 
-    func login(usernameOrEmail username: String, password: String) -> Request<HTTPBinGet>
+    func login(usernameOrEmail username: String, password: String) -> Request<HttpBingGet>
 
     func createUser(email: String, username: String?, password: String)
 }
